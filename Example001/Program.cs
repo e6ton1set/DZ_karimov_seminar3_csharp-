@@ -5,8 +5,20 @@
 
 int SearchDegree(int a, int b)
 {
-    int result = Convert.ToInt32(Math.Pow(a, b));
+    //int result = Convert.ToInt32(Math.Pow(a, b));
 
+    int result = a;
+    for (int i = 1; i <= b; i++)
+    {
+        if (a < 0)
+        {
+            result = result * a * -1;
+        }
+        if (a > 0)
+        {
+            result = result * a;
+        }
+    }
     return result;
 }
 
